@@ -1,6 +1,10 @@
 let quadrado = document.querySelectorAll(".quadrado")
 let player = document.getElementById("player")
 let verifica = document.getElementById("verifica")
+let playerPointsX = document.getElementById("player-x")
+let playerPointsO = document.getElementById("player-o")
+let pontoX = 0
+let pontoO = 0
 let control = 0
 let deuVelha = 0
 
@@ -60,72 +64,105 @@ quadrado.forEach((element, number) => {
         if (jgVelha[0][0] == "X" && jgVelha[0][1] == "X" && jgVelha[0][2] == "X") {
             player.innerHTML = "Jogador X venceu !!"
             verifica.innerHTML = ''
+            playerPointsX.innerHTML = `Pontos x = ${pontoX += 1}`
+            restartJgVelha()
         }
         else if (jgVelha[1][0] == "X" && jgVelha[1][1] == "X" && jgVelha[1][2] == "X") {
             player.innerHTML = "Jogador X venceu !!"
             verifica.innerHTML = ''
+            playerPointsX.innerHTML = `Pontos x = ${pontoX += 1}`
+            restartJgVelha()
         }
         else if (jgVelha[2][0] == "X" && jgVelha[2][1] == "X" && jgVelha[2][2] == "X") {
             player.innerHTML = "Jogador X venceu !!"
             verifica.innerHTML = ''
+            playerPointsX.innerHTML = `Pontos x = ${pontoX += 1}`
+            restartJgVelha()
         }
 
 
         else if (jgVelha[0][0] == "X" && jgVelha[1][0] == "X" && jgVelha[2][0] == "X") {
             player.innerHTML = "Jogador X venceu !!"
             verifica.innerHTML = ''
+            playerPointsX.innerHTML = `Pontos x = ${pontoX += 1}`
+            restartJgVelha()
         }
         else if (jgVelha[0][1]== "X" && jgVelha[1][1]== "X" && jgVelha[2][1] == "X") {
             player.innerHTML = "Jogador X venceu !!"
             verifica.innerHTML = ''
+            playerPointsX.innerHTML = `Pontos x = ${pontoX += 1}`
+            restartJgVelha()
         }
         else if (jgVelha[0][2]== "X" && jgVelha[1][2]== "X" && jgVelha[2][2] == "X") {
             player.innerHTML = "Jogador X venceu !!"
             verifica.innerHTML = ''
+            playerPointsX.innerHTML = `Pontos x = ${pontoX += 1}`
+            restartJgVelha()
         }
 
         else if (jgVelha[0][0] == "X" && jgVelha[1][1] == "X" && jgVelha[2][2] == "X") {
             player.innerHTML = "Jogador X venceu !!"
             verifica.innerHTML = ''
+            playerPointsX.innerHTML = `Pontos x = ${pontoX += 1}`
+            restartJgVelha()
         }
         else if (jgVelha[0][2] == "X" && jgVelha[1][1] == "X" && jgVelha[2][0] == "X") {
             player.innerHTML = "Jogador X venceu !!"
             verifica.innerHTML = ''
+            playerPointsX.innerHTML = `Pontos x = ${pontoX += 1}`
+            restartJgVelha()
         }
 
         // jogador O
 
         else if (jgVelha[0][0] == "O" && jgVelha[0][1] == "O" && jgVelha[0][2] == "O") {
             player.innerHTML = "Jogador O venceu !!"
+            playerPointsO.innerHTML = `Pontos o = ${pontoO += 1}`
+            restartJgVelha()
         }
         else if (jgVelha[1][0] == "O" && jgVelha[1][1] == "O" && jgVelha[1][2] == "O") {
             player.innerHTML = "Jogador O venceu !!"
+            playerPointsO.innerHTML = `Pontos o = ${pontoO += 1}`
+            restartJgVelha()
         }
         else if (jgVelha[2][0] == "O" && jgVelha[2][1] == "O" && jgVelha[2][2] == "O") {
             player.innerHTML = "Jogador O venceu !!"
+            playerPointsO.innerHTML = `Pontos o = ${pontoO += 1}`
+            restartJgVelha()
         }
 
 
         else if (jgVelha[0][0] == "O" && jgVelha[1][0] == "O" && jgVelha[2][0] == "O") {
             player.innerHTML = "Jogador O venceu !!"
+            playerPointsO.innerHTML = `Pontos o = ${pontoO += 1}`
+            restartJgVelha()
         }
         else if (jgVelha[0][1] == "O" && jgVelha[1][1] == "O" && jgVelha[2][1] == "O") {
             player.innerHTML = "Jogador O venceu !!"
+            playerPointsO.innerHTML = `Pontos o = ${pontoO += 1}`
+            restartJgVelha()
         }
         else if (jgVelha[0][2] == "O" && jgVelha[1][2] == "O" && jgVelha[2][2] == "O") {
             player.innerHTML = "Jogador O venceu !!"
+             playerPointsO.innerHTML = `Pontos o = ${pontoO += 1}`
+            restartJgVelha()
         }
 
         else if (jgVelha[0][0] == "O" && jgVelha[1][1] == "O" && jgVelha[2][2] == "O") {
             player.innerHTML = "Jogador O venceu !!"
+            playerPointsO.innerHTML = `Pontos o = ${pontoO += 1}`
+            restartJgVelha()
         }
         else if (jgVelha[0][2] == "O" && jgVelha[1][1] == "O" && jgVelha[2][0] == "O") {
             player.innerHTML = "Jogador O venceu !!"
+            playerPointsO.innerHTML = `Pontos o = ${pontoO += 1}`
+            restartJgVelha()
 
         } 
         else if(control == 9) {
             verifica.innerHTML = "Deu Velha"
             player.innerHTML = ""
+            restartJgVelha()
         }
         
         
@@ -136,10 +173,23 @@ quadrado.forEach((element, number) => {
         console.log(jgVelha)
         console.log(element)
         console.log(number)
-        console.log(control)
+        console.log("controle: ",control)
         
         
     })
 });
 
+function restartJgVelha() {
+    quadrado.forEach(element => {
+        element.innerHTML = ""
 
+    });
+    for( let l = 0; l < 3 ; l++){
+        for( let c = 0; c < 3; c++) {
+            jgVelha[l][c] = ""
+        }
+    }
+
+    deuVelha = 0
+    control = 0
+}

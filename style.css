@@ -7,12 +7,36 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     height: 100vh;
+    flex-direction: column;
     width: 100vw;
     background-color: black;
     color: white;
     font-family: "bit";
+}
+h1 {
+    margin-bottom: 60px;
+}
+
+#content {
+    display: flex;
+    gap: 30px;
+    width: 100vw;
+    align-items:  center;
+    flex-direction: column;
+}
+
+#turn-player {
+    width: 220px;
+    height: 90px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+#players-points {
+    width: 220px;
+    text-align: center;
 }
 
 #velha {
@@ -21,6 +45,7 @@ body {
     background-color: rgb(0, 0, 0);    
     color: black;
     font-family: "bit";
+    margin-bottom: 30px;
     
 }
 
@@ -37,4 +62,8 @@ body {
 
 .linha {
     display: flex;
+}
+
+footer {
+    font-family: 'Courier New', Courier, monospace;
 }
